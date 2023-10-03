@@ -16,7 +16,7 @@ class ListArray : public List<T> {
         ListArray();
 	~ListArray();
 	T operator[](int pos);
-	friend std::ostream&operator<<(std::ostream &out, const ListArray<T> &list);
+	friend std::ostream& operator<<(std::ostream &out, const ListArray<T> &list);
   	virtual void insert(int pos, T e) override;
         virtual void append(T e) override;
         virtual void prepend(T e) override;
@@ -24,7 +24,7 @@ class ListArray : public List<T> {
         virtual T get(int pos) override;
         virtual int search(T e) override;
         virtual bool empty() override;
-        virtual int size() override;
+        int size();
 	// miembros públicos, incluidos los heredados de List<T>
     
 };
